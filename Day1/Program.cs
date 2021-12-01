@@ -6,7 +6,7 @@ void Part1()
 {
     int increases = 0;
 
-    File.ReadAllLines("input1.txt")
+    File.ReadAllLines("input.txt")
         .Select(x => int.Parse(x))
         .Aggregate((previous, current) =>
         {
@@ -25,7 +25,7 @@ void Part2()
     int increases = 0;
 
     int windowSize = 3;
-    var items = File.ReadAllLines("input2.txt").Select(x => int.Parse(x)).ToArray();
+    var items = File.ReadAllLines("input.txt").Select(x => int.Parse(x)).ToArray();
 
     for(int index = windowSize + 1; index <= items.Length; index++)
     {
